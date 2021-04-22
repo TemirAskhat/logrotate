@@ -30,7 +30,7 @@ image: temaskhat/logrotate
 ```
 
 ## Usage
-
+```
 docker pull temaskhat/logrotate
 
 ## Supported ENV variables are
