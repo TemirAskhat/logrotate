@@ -32,7 +32,7 @@ image: temaskhat/logrotate
 ## Usage
 ```
 docker pull temaskhat/logrotate
-
+```
 ## Supported ENV variables are
 ```
 LOGROTATE_SIZE, LOGROTATE_COMPRESSION, LOGROTATE_CRON, LOGROTATE_DIRECTORY, LOGROTATE_ROTATE, LOGROTATE_DELETION_MTIME
