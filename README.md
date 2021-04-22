@@ -6,8 +6,6 @@ Logrotate docker image which is primarily used as a sidecar in k8s deployment.
 
 ## k8s manifest example
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
 ```yaml
 image: temaskhat/logrotate
           imagePullPolicy: IfNotPresent
@@ -19,7 +17,7 @@ image: temaskhat/logrotate
             - name: LOGROTATE_COMPRESSION
               value: "compress"
             - name: LOGROTATE_CRON
-              value: "* * * * *" 
+              value: "* * * * *"
             - name: LOGROTATE_DIRECTORY
               value: "/var/logs"
             - name: LOGROTATE_ROTATE
@@ -35,7 +33,7 @@ image: temaskhat/logrotate
 
 docker pull temaskhat/logrotate
 
-## Supported ENV variables are 
+## Supported ENV variables are
 ```
 LOGROTATE_SIZE, LOGROTATE_COMPRESSION, LOGROTATE_CRON, LOGROTATE_DIRECTORY, LOGROTATE_ROTATE, LOGROTATE_DELETION_MTIME
 ```
