@@ -8,7 +8,6 @@ RUN set -x \
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
-
 # VOLUME ["root/var/logs"]
 
 ENTRYPOINT ["tini", "-g", "--"]
