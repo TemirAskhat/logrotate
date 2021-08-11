@@ -6,8 +6,10 @@ RUN set -x \
   && mv /etc/periodic/daily/logrotate /etc/.logrotate.cronjob
 
 COPY start.sh /start.sh
+RUN chmod +x /start.sh
 
-VOLUME ["root/var/logs"]
+
+# VOLUME ["root/var/logs"]
 
 ENTRYPOINT ["tini", "-g", "--"]
 CMD ["/start.sh"]
