@@ -8,25 +8,25 @@ Logrotate docker image which is primarily used as a sidecar in k8s deployment.
 
 ```yaml
 image: temaskhat/logrotate
-          imagePullPolicy: IfNotPresent
-          securityContext:
-            privileged: true
-          env:
-            - name: LOGROTATE_SIZE
-              value: "40M"
-            - name: LOGROTATE_COMPRESSION
-              value: "compress"
-            - name: LOGROTATE_CRON
-              value: "* * * * *"
-            - name: LOGROTATE_DIRECTORY
-              value: "/var/logs"
-            - name: LOGROTATE_ROTATE
-              value: "1"
-            - name: LOGROTATE_DELETION_MTIME
-              value: "+0"
-          volumeMounts:
-            - name: {yourVolumeMountName}
-              mountPath: {mountedDirectoryPath}
+imagePullPolicy: IfNotPresent
+securityContext:
+  privileged: true
+env:
+  - name: LOGROTATE_SIZE
+    value: "40M"
+  - name: LOGROTATE_COMPRESSION
+    value: "compress"
+  - name: LOGROTATE_CRON
+    value: "* * * * *"
+  - name: LOGROTATE_DIRECTORY
+    value: "/var/logs"
+  - name: LOGROTATE_ROTATE
+    value: "1"
+  - name: LOGROTATE_DELETION_MTIME
+    value: "+0"
+volumeMounts:
+  - name: {yourVolumeMountName}
+    mountPath: {mountedDirectoryPath}
 ```
 
 ## Usage
