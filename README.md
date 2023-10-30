@@ -2,8 +2,7 @@
 
 * Logrotate docker image which is primarily used as a sidecar in k8s deployment.
 * Docker hub link => https://hub.docker.com/repository/docker/temaskhat/logrotate/general
-
-[What is a sidecar pattern?](https://www.magalix.com/blog/the-sidecar-pattern)
+* [What is a sidecar pattern?](https://www.magalix.com/blog/the-sidecar-pattern)
 
 ## k8s manifest example
 
